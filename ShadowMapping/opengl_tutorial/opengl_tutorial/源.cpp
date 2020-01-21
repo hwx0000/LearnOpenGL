@@ -304,6 +304,7 @@ int main(int argc, char * argv[])
 		
 		//先渲染深度贴图
 		lightShader->Use();
+		glViewport(0, 0, 1024.0f, 1024.0f);
 		glBindFramebuffer(GL_FRAMEBUFFER, depthMapFBO);
 		glUniformMatrix4fv(glGetUniformLocation(lightShader->GetID(), "model"), 1, GL_FALSE, &model[0][0]);
 		glUniformMatrix4fv(glGetUniformLocation(lightShader->GetID(), "lightView"), 1, GL_FALSE, &lightView[0][0]);
@@ -320,11 +321,12 @@ int main(int argc, char * argv[])
 		//再渲染正常场景
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		sceneShader->Use();
+		glViewport();
 		glUniformMatrix4fv(glGetUniformLocation(sceneShader->GetID(), "model"), 1, GL_FALSE, &model[0][0]);
 		glUniformMatrix4fv(glGetUniformLocation(sceneShader->GetID(), "view"), 1, GL_FALSE, &view[0][0]);
 		glUniformMatrix4fv(glGetUniformLocation(sceneShader->GetID(), "projection"), 1, GL_FALSE, &projection[0][0]);
 
-		glTexImage2D(GL_TEXTURE_2D, );
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, );
 
 
 

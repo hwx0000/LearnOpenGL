@@ -31,6 +31,38 @@ glm::mat4 model = glm::mat4(1.0f);
 glm::mat4 view = glm::mat4(1.0f);
 glm::mat4 projection = glm::mat4(1.0f);
 
+
+//Definition for a binary tree node.
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
+public:
+	bool isSymmetric(TreeNode* root) {
+		if (!root)
+			return true;
+		if (root->left && root->right)
+		{
+			if (root->left->val != root->right->val)
+				return false;
+			else if (!root->left->left && !root->left->right && !root->right->left && !root->right->right
+				)
+				return true;
+			return isSymmetric(root->left) && isSymmetric(root->right);
+		}
+		if (!root->left && !root->right)
+		{
+			return true;
+		}
+		return false;
+	}
+};
+
+
 void processInput(GLFWwindow *window)
 {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
