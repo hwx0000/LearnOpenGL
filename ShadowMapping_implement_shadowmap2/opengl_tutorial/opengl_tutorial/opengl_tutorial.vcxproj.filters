@@ -32,19 +32,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Scene.vert">
-      <Filter>资源文件\shaders</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
-    <None Include="light.frag">
+    <None Include="createShadowMap.frag">
       <Filter>资源文件\shaders</Filter>
     </None>
-    <None Include="light.vert">
+    <None Include="createShadowMap.vert">
       <Filter>资源文件\shaders</Filter>
     </None>
-    <None Include="Scene.frag">
+    <None Include="DrawScene.frag">
       <Filter>资源文件\shaders</Filter>
     </None>
   </ItemGroup>
@@ -78,32 +73,25 @@
     <Image Include="awesomeface.png">
       <Filter>资源文件\pics</Filter>
     </Image>
-    <Image Include="back.jpg">
-      <Filter>资源文件\pics</Filter>
-    </Image>
     <Image Include="blending_transparent_window.png">
-      <Filter>资源文件\pics</Filter>
-    </Image>
-    <Image Include="bottom.jpg">
       <Filter>资源文件\pics</Filter>
     </Image>
     <Image Include="container.jpg">
       <Filter>资源文件\pics</Filter>
     </Image>
-    <Image Include="front.jpg">
-      <Filter>资源文件\pics</Filter>
-    </Image>
     <Image Include="grass.png">
       <Filter>资源文件\pics</Filter>
     </Image>
-    <Image Include="left.jpg">
-      <Filter>资源文件\pics</Filter>
-    </Image>
-    <Image Include="right.jpg">
-      <Filter>资源文件\pics</Filter>
-    </Image>
-    <Image Include="top.jpg">
-      <Filter>资源文件\pics</Filter>
-    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="DrawScene.vert">
+      <Filter>资源文件\shaders</Filter>
+    </Text>
+    <Text Include="DrawDepthMapQuad.vert">
+      <Filter>资源文件\shaders</Filter>
+    </Text>
+    <Text Include="DrawDepthMapQuad.frag">
+      <Filter>资源文件\shaders</Filter>
+    </Text>
   </ItemGroup>
 </Project>

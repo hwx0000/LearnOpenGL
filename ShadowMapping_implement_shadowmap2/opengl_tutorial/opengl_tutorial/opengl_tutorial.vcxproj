@@ -136,12 +136,14 @@
     <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Scene.vert" />
+    <Text Include="DrawScene.vert" />
+    <Text Include="DrawDepthMapQuad.vert" />
+    <Text Include="DrawDepthMapQuad.frag" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scene.frag" />
-    <None Include="light.frag" />
-    <None Include="light.vert" />
+    <None Include="createShadowMap.frag" />
+    <None Include="createShadowMap.vert" />
+    <None Include="DrawScene.frag" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -156,15 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="awesomeface.png" />
-    <Image Include="back.jpg" />
     <Image Include="blending_transparent_window.png" />
-    <Image Include="bottom.jpg" />
     <Image Include="container.jpg" />
-    <Image Include="front.jpg" />
     <Image Include="grass.png" />
-    <Image Include="left.jpg" />
-    <Image Include="right.jpg" />
-    <Image Include="top.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
